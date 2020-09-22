@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 define(['qlik'], function (qlik, utils) {
-  var data = {
+  /* var data = {
     uses: 'data',
     translation: "Mini-Chart - Data",
     type: "items",
@@ -24,24 +24,24 @@ define(['qlik'], function (qlik, utils) {
         max: 2
       }
     }
-  };
+  }; */
 
   /* Measure 1 Settings */
 
-  var measure1Fx = {
+  /* var measure1Fx = {
     ref: "prop.measure1.fx",
     label: "Measure",
     type: "string",
     expression: "always"
-  };
+  }; */
 
-  var measure1Name = {
+  /* var measure1Name = {
     ref: "prop.measure1.name",
     label: "Measure Title",
     type: "string",
     expression: "optional"
-  };
-
+  }; */
+  
   var measure1Align = {
     ref: "prop.measure1.align",
     label: "Text align",
@@ -65,7 +65,7 @@ define(['qlik'], function (qlik, utils) {
     ref: "prop.measure1.kpi.size",
     type: "string",
     expression: "optional",
-    defaultValue: "1.8rem"
+    defaultValue: "3.0rem"
   };
 
   var measure1KpiFont = {
@@ -88,7 +88,7 @@ define(['qlik'], function (qlik, utils) {
       value: "700",
       label: "On"
     }],
-    defaultValue: "400"
+    defaultValue: "700"
   };
 
   var measure1KpiStyleItalic = {
@@ -126,15 +126,32 @@ define(['qlik'], function (qlik, utils) {
     ref: "prop.measure1.kpi.color.color",
     type: "string",
     expression: "optional",
-    defaultValue: "#595959"
+    defaultValue: "#858585"
   };
 
+  //DJ
+  var measure1TitleSwitch = {
+    label: "Title On/Off",
+    ref: "prop.measure1.title.switch",
+    type: "boolean",
+    component: "switch",
+    options: [{
+      value: true,
+      label: "On"
+    }, {
+      value: false,
+      label: "Off"
+    }],
+    defaultValue: false
+  };
+  //DJ
+  
   var measure1TitleStyleSize = {
     label: "Font Size",
     ref: "prop.measure1.title.size",
     type: "string",
     expression: "optional",
-    defaultValue: "1.5rem"
+    defaultValue: "3.0rem"
   };
 
   var measure1TitleFont = {
@@ -157,7 +174,7 @@ define(['qlik'], function (qlik, utils) {
       value: "700",
       label: "On"
     }],
-    defaultValue: "400"
+    defaultValue: "700"
   };
 
   var measure1TitleStyleItalic = {
@@ -195,7 +212,7 @@ define(['qlik'], function (qlik, utils) {
     label: "Color",
     component: "color-picker",
     type: "object",
-    defaultValue: "#595959"
+    defaultValue: "#858585"
   };
 
   var measure1TrendSwitch = {
@@ -266,7 +283,7 @@ define(['qlik'], function (qlik, utils) {
 
   /* Measure 2 Settings */
 
-  var measure2Fx = {
+  /* var measure2Fx = {
     ref: "prop.measure2.fx",
     label: "Measure",
     type: "string",
@@ -482,11 +499,11 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.measure2.trend.switch) { return true; }
     }
-  };
+  }; */
 
   /* Measure 3 Settings */
 
-  var measure3Fx = {
+  /* var measure3Fx = {
     ref: "prop.measure3.fx",
     label: "Measure",
     type: "string",
@@ -498,7 +515,7 @@ define(['qlik'], function (qlik, utils) {
     label: "Measure Title",
     type: "string",
     expression: "optional"
-  };
+  }; */
 
   var measure3Align = {
     ref: "prop.measure3.align",
@@ -523,7 +540,7 @@ define(['qlik'], function (qlik, utils) {
     ref: "prop.measure3.kpi.size",
     type: "string",
     expression: "optional",
-    defaultValue: "0.8rem"
+    defaultValue: "1.5rem"
   };
 
   var measure3KpiFont = {
@@ -546,7 +563,7 @@ define(['qlik'], function (qlik, utils) {
       value: "700",
       label: "On"
     }],
-    defaultValue: "400"
+    defaultValue: "700"
   };
 
   var measure3KpiStyleItalic = {
@@ -584,15 +601,32 @@ define(['qlik'], function (qlik, utils) {
     ref: "prop.measure3.kpi.color.color",
     type: "string",
     expression: "optional",
-    defaultValue: "#595959"
+    defaultValue: "#858585"
   };
 
+  //DJ
+  var measure3TitleSwitch = {
+    label: "Title On/Off",
+    ref: "prop.measure3.title.switch",
+    type: "boolean",
+    component: "switch",
+    options: [{
+      value: true,
+      label: "On"
+    }, {
+      value: false,
+      label: "Off"
+    }],
+    defaultValue: false
+  };
+  //DJ
+  
   var measure3TitleStyleSize = {
     label: "Font Size",
     ref: "prop.measure3.title.size",
     type: "string",
     expression: "optional",
-    defaultValue: "0.8rem"
+    defaultValue: "1.5rem"
   };
 
   var measure3TitleFont = {
@@ -615,7 +649,7 @@ define(['qlik'], function (qlik, utils) {
       value: "700",
       label: "On"
     }],
-    defaultValue: "400"
+    defaultValue: "700"
   };
 
   var measure3TitleStyleItalic = {
@@ -653,7 +687,7 @@ define(['qlik'], function (qlik, utils) {
     label: "Color",
     component: "color-picker",
     type: "object",
-    defaultValue: "#595959"
+    defaultValue: "#858585"
   };
 
   var measure3TrendSwitch = {
@@ -706,7 +740,7 @@ define(['qlik'], function (qlik, utils) {
 
   /* Measure 4 Settings */
 
-  var measure4Fx = {
+  /* var measure4Fx = {
     ref: "prop.measure4.fx",
     label: "Measure",
     type: "string",
@@ -922,11 +956,11 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.measure4.trend.switch) { return true; }
     }
-  };
+  }; */
 
   /* Minichart Settings */
 
-  var minichartType = {
+  /*  var minichartType = {
     ref: "prop.minichart.type",
     label: "Chart-Type",
     component: "dropdown",
@@ -939,9 +973,9 @@ define(['qlik'], function (qlik, utils) {
       label: "Barchart"
     }],
     defaultValue: "bar"
-  };
+  }; */
 
-  var minichartGridhor = {
+  /* var minichartGridhor = {
     ref: "prop.minichart.gridlinehor",
     label: "Chart-Grid-Line horizontal",
     component: "dropdown",
@@ -1056,9 +1090,9 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.minichart.type == "bar" && data.qHyperCubeDef.qMeasures.length == 2) { return true; }
     }
-  };
+  }; */
 
-  var minichartBarAlignCompare2 = {
+  /* var minichartBarAlignCompare2 = {
     ref: "prop.minichart.baraligncompare2",
     type: "number",
     component: "slider",
@@ -1070,9 +1104,9 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.minichart.type == "bar" && data.qHyperCubeDef.qMeasures.length == 2) { return true; }
     }
-  };
+  }; */
 
-  var minichartOpacity = {
+  /* var minichartOpacity = {
     ref: "prop.minichart.opacity",
     type: "number",
     component: "slider",
@@ -1081,9 +1115,9 @@ define(['qlik'], function (qlik, utils) {
     max: 1,
     step: 0.1,
     defaultValue: 1
-  };
+  }; */
 
-  var minichartRefShow = {
+  /* var minichartRefShow = {
     ref: "prop.minichart.ref.show",
     type: "boolean",
     component: "switch",
@@ -1096,9 +1130,9 @@ define(['qlik'], function (qlik, utils) {
       label: "On"
     }],
     defaultValue: false
-  };
+  }; */
 
-  var minichartArea = {
+  /* var minichartArea = {
     ref: "prop.minichart.area",
     type: "number",
     component: "slider",
@@ -1107,9 +1141,9 @@ define(['qlik'], function (qlik, utils) {
     max: 100,
     step: 5,
     defaultValue: 50
-  };
+  }; */
 
-  var minichartRefValue = {
+  /* var minichartRefValue = {
     ref: "prop.minichart.ref.value",
     label: "Value",
     type: "number",
@@ -1117,9 +1151,9 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.minichart.ref.show) { return true; }
     }
-  };
+  }; */
 
-  var minichartRefStrokeWidth = {
+  /* var minichartRefStrokeWidth = {
     ref: "prop.minichart.ref.strokewidth",
     label: "Line-Size",
     type: "string",
@@ -1128,9 +1162,9 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.minichart.ref.show) { return true; }
     }
-  };
+  }; */
 
-  var minichartRefColor = {
+  /* var minichartRefColor = {
     ref: "prop.minichart.ref.color",
     label: "Color",
     component: "color-picker",
@@ -1142,9 +1176,9 @@ define(['qlik'], function (qlik, utils) {
     show: function (data) {
       if (data.prop.minichart.ref.show) { return true; }
     }
-  };
+  }; */
 
-  var minichartFullScreen = {
+  /* var minichartFullScreen = {
     ref: "prop.minichart.fullscreen",
     label: "Chart Fullscreen Mode",
     component: "switch",
@@ -1157,7 +1191,7 @@ define(['qlik'], function (qlik, utils) {
       label: "On"
     }],
     defaultValue: false
-  };
+  }; */
 
   /* else */
 
@@ -1223,44 +1257,15 @@ define(['qlik'], function (qlik, utils) {
     }],
     defaultValue: false
   };
-  
-  var backgroundswitchfxpick = {
-    label: "Mode",
-    component: "switch",
-    ref: "prop.background.switchfxpick",
-    type: "boolean",
-    options: [{
-      value: true,
-      label: "Formula"
-    }, {
-      value: false,
-      label: "Color Picker"
-    }],
-    defaultValue: false,
-    show: function (data) {
-      if (data.prop.background.switch && data.prop.background.cssswitch != true) { return true; }
-    }
-  };
 
   var backgroundcolor = {
     ref: "prop.background.color",
     label: "Color",
     component: "color-picker",
     type: "object",
+    defaultValue: "none",
     show: function (data) {
-      //if (data.prop.background.switch && data.prop.background.cssswitch != true) { return true; }
-      if (data.prop.background.switch && data.prop.background.cssswitch != true && data.prop.background.switchfxpick != true) { return true; }
-    }
-  };
-
-  var backgroundcolorfx = {
-    ref: "prop.background.colorfx",
-    label: "Color",
-    type: "string",
-    expression: "optional",
-    default: "#ffffff",
-    show: function (data) {
-      if (data.prop.background.switch && data.prop.background.cssswitch != true && data.prop.background.switchfxpick != false) { return true; }
+      if (data.prop.background.switch && data.prop.background.cssswitch != true) { return true; }
     }
   };
 
@@ -1306,7 +1311,6 @@ define(['qlik'], function (qlik, utils) {
     ref: "prop.background.picture",
     type: "string",
     layoutRef: "prop.background.picture",
-    defaultValue: "false",
     show: function (data) {
       if (data.prop.background.pictureswitch && data.prop.background.cssswitch) { return true; }
     }
@@ -1568,9 +1572,7 @@ define(['qlik'], function (qlik, utils) {
         label: "Background",
         items: {
           backgroundswitch: backgroundswitch,
-          backgroundswitchfxpick: backgroundswitchfxpick,
           backgroundcolor: backgroundcolor,
-          backgroundcolorfx: backgroundcolorfx,
           backgroundcssswitch: backgroundcssswitch,
           backgroundcss: backgroundcss,
           backgroundpictureswitch: backgroundpictureswitch,
@@ -1597,17 +1599,24 @@ define(['qlik'], function (qlik, utils) {
     }
   };
 
+  //DJ new code
   var measures = {
+    uses: "measures",
+    min: 0,
+    max: 2
+  };
+  
+  var measureProperties = {
     type: "items",
-    label: "Measures",
+    label: "Measure Properties",//DJ
     component: "expandable-items",
     items: {
       measure_top: {
         type: "items",
-        label: "Top-Level",
+        label: "Measure 1",
         items: {
-          measure1Fx: measure1Fx,
-          measure1Name: measure1Name,
+          //measure1Fx: measure1Fx,
+          //measure1Name: measure1Name,
           measure1Align: measure1Align,
           measure1KPI: {
             component: "expandable-items",
@@ -1635,7 +1644,8 @@ define(['qlik'], function (qlik, utils) {
                 type: "items",
                 label: "Title Settings",
                 items: {
-                  measure1TitleFont: measure1TitleFont,
+                  measure1TitleSwitch: measure1TitleSwitch,//DJ 
+				  measure1TitleFont: measure1TitleFont,
                   measure1TitleStyleSize: measure1TitleStyleSize,
                   measure1TitleStyleBold: measure1TitleStyleBold,
                   measure1TitleStyleItalic: measure1TitleStyleItalic,
@@ -1665,7 +1675,7 @@ define(['qlik'], function (qlik, utils) {
           }
         }
       },
-      measure_left: {
+      /* measure_left: {
         type: "items",
         label: "Left",
         items: {
@@ -1726,13 +1736,13 @@ define(['qlik'], function (qlik, utils) {
             }
           }
         }
-      },
+      }, */
       measure_center: {
         type: "items",
-        label: "Center",
+        label: "Measure 2",
         items: {
-          measure3Fx: measure3Fx,
-          measure3Name: measure3Name,
+          //measure3Fx: measure3Fx,
+          //measure3Name: measure3Name,
           measure3Align: measure3Align,
           measure3KPI: {
             component: "expandable-items",
@@ -1760,7 +1770,8 @@ define(['qlik'], function (qlik, utils) {
                 type: "items",
                 label: "Title Settings",
                 items: {
-                  measure3TitleFont: measure3TitleFont,
+                  measure3TitleSwitch: measure3TitleSwitch,//DJ 
+				  measure3TitleFont: measure3TitleFont,
                   measure3TitleStyleSize: measure3TitleStyleSize,
                   measure3TitleStyleBold: measure3TitleStyleBold,
                   measure3TitleStyleItalic: measure3TitleStyleItalic,
@@ -1789,7 +1800,7 @@ define(['qlik'], function (qlik, utils) {
           }
         }
       },
-      measure_right: {
+      /* measure_right: {
         type: "items",
         label: "Right",
         items: {
@@ -1850,7 +1861,7 @@ define(['qlik'], function (qlik, utils) {
             }
           }
         }
-      }
+      } */
     }
   };
 
@@ -1914,7 +1925,7 @@ define(['qlik'], function (qlik, utils) {
     }
   };
 
-  var minichart = {
+  /*var minichart = {
     type: "items",
     label: "Mini-Chart - Config",
     component: "items",
@@ -1937,7 +1948,7 @@ define(['qlik'], function (qlik, utils) {
       minichartRefColor: minichartRefColor,
       minichartFullScreen: minichartFullScreen
     }
-  };
+  }; */
 
   var aboutDefinition = {
     component: 'items',
@@ -1957,7 +1968,7 @@ define(['qlik'], function (qlik, utils) {
         component: 'text'
       },
       paragraph3: {
-        label: 'Version: 0.1.6',
+        label: 'Version: 0.1.4',
         component: 'text'
       }
     }
@@ -1968,8 +1979,8 @@ define(['qlik'], function (qlik, utils) {
     component: "accordion",
     items: {
       measures: measures,
-      data: data,
-      minichart: minichart,
+	  measureProperties: measureProperties,
+      //minichart: minichart,
       actions: actions,
       appearance: appearance,
       sorting: sorting,
