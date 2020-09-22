@@ -14,7 +14,7 @@ const config = {
   ],
   mode: MODE,
   output: {
-    filename: `${packageJSON.name}.js`,
+    filename: `PH ${packageJSON.name}.js`,
     libraryTarget: 'amd',
     path: DIST
   },

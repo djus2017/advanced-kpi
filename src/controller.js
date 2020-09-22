@@ -30,7 +30,7 @@ export default ['$scope', '$element', function ($scope, $element) {
   var picassoSettings;
 
   //picks settings JSON for picasso --> picassoSettings
-  function getSettings() {
+  /*  function getSettings() {
     var chartType = $scope.layout.prop.minichart.type;
     var amountMes = $scope.layout.qHyperCube.qMeasureInfo.length;
 
@@ -70,10 +70,10 @@ export default ['$scope', '$element', function ($scope, $element) {
       settings: picassoSettings,
       beforeRender() { qlik.resize(); }
     });
-  }
+  } */
 
   //Scope for changes within hypercube measures
-  $scope.$watch("layout.qHyperCube.qMeasureInfo", function () {
+  /*  $scope.$watch("layout.qHyperCube.qMeasureInfo", function () {
     if ($scope.layout.qHyperCube.qMeasureInfo[0] && $scope.layout.qHyperCube.qDimensionInfo[0]) {
       if ($scope.chart) {
         getSettings();
@@ -117,10 +117,10 @@ export default ['$scope', '$element', function ($scope, $element) {
       $scope.chart.update($scope.chart);
       qlik.resize();
     }
-  }, true);
+  }, true); */
 
   //Get initial Settings
-  getSettings();
+  //getSettings();
 
   //Scope CSS definition for background
   $scope.$watch('[layout.prop.background]', function () {
@@ -133,12 +133,7 @@ export default ['$scope', '$element', function ($scope, $element) {
           $scope.backgroundcss["background-image"] = 'url(' + $scope.layout.prop.background.picture + ')';
         }
       } else {
-        if($scope.layout.prop.background.switchfxpick){
-          $scope.backgroundcss = { "background-color": $scope.layout.prop.background.colorfx };
-        }
-        if($scope.layout.prop.background.switchfxpick == false){
-          $scope.backgroundcss = { "background-color": $scope.layout.prop.background.color.color };
-        }
+        $scope.backgroundcss = { "background-color": $scope.layout.prop.background.color.color };
       }
     } catch (err) {
       console.log(err);

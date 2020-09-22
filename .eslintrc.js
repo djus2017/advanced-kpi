@@ -23,7 +23,7 @@ module.exports = {
     require: false
   },
   rules: {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
     "object-curly-spacing": ["error", "always"],
     "max-len": ["warn", { "code": 120, "ignoreComments": true, "ignoreTrailingComments": false }],
     "no-console": ["warn"],

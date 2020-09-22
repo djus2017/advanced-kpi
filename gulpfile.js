@@ -11,7 +11,7 @@ var VERSION = process.env.VERSION || 'local-dev';
 
 gulp.task('qext', function () {
 	var qext = {
-		name: 'Advanced-KPI',
+		name: 'PH Advanced-KPI',
 		type: 'visualization',
 		description: pkg.description + '\nVersion: ' + VERSION,
 		version: VERSION,
@@ -36,7 +36,7 @@ gulp.task('qext', function () {
 		this.push(new gutil.File({
 			cwd: '',
 			base: '',
-			path: pkg.name + '.qext',
+			path: 'PH ' + pkg.name + '.qext',
 			contents: Buffer.from(JSON.stringify(qext, null, 4))
 		}));
 		this.push(null);

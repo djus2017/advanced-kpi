@@ -4,7 +4,6 @@ import initialProperties from './initial-properties.js';
 import template from './template.html';
 import definition from './definition.js';
 import controller from './controller.js';
-// eslint-disable-next-line no-unused-vars
 import localCSS from './style.css';
 
 export default {
@@ -34,14 +33,13 @@ export default {
     let app = qlik.currApp(this);
     const scope = this.$scope;
     this.$scope.isInEdit = this.options.interactionState == 2;
-
-    //console.log(layout);
-
-    //Display welcome message
+	//Display welcome message
     scope.init = false;
-    if (layout.prop.measure1.fx != "" || layout.prop.measure2.fx != "" || layout.prop.measure3.fx != "" || layout.prop.measure4.fx != "") {
+    //if (layout.prop.measure1.fx != "" || layout.prop.measure2.fx != "" || layout.prop.measure3.fx != "" || layout.prop.measure4.fx != "") {  //DJ Update
+	if (layout.prop.measure1.fx != "" || layout.prop.measure3.fx != "") {
       scope.init = false;
-    } else if (layout.prop.measure1.name != "" || layout.prop.measure2.name != "" || layout.prop.measure3.name != "" || layout.prop.measure4.name != "") {
+    //} else if (layout.prop.measure1.name != "" || layout.prop.measure2.name != "" || layout.prop.measure3.name != "" || layout.prop.measure4.name != "") {  //DJ Update
+	} else if (layout.prop.measure1.name != "" || layout.prop.measure3.name != "") {
       scope.init = false;
     } else if (layout.qHyperCube.qMeasureInfo[0] && layout.qHyperCube.qDimensionInfo[0]) {
       scope.init = false;
@@ -51,8 +49,10 @@ export default {
       scope.init = true;
     }
 
+    //console.log(scope.layout);
+
     // getting chart-offset
-    let ChartOffset = ((($element[0].clientHeight / 100) * scope.layout.prop.minichart.area) - $element[0].clientHeight) * -1;
+    /* let ChartOffset = ((($element[0].clientHeight / 100) * scope.layout.prop.minichart.area) - $element[0].clientHeight) * -1;
 
     if (scope.layout.qHyperCube.qDimensionInfo.length > 0 || scope.layout.qHyperCube.qMeasureInfo.length > 0) {
       if (scope.layout.prop.minichart.fullscreen) {
@@ -64,7 +64,7 @@ export default {
       }
     } else {
       scope.KPIPosition = { "postion": "relative", "top": "0px" };
-    }
+    } */
 
     //refreshing chart
     if (scope.chart) {
